@@ -1,0 +1,7 @@
+{
+  "CN": "My Certificate Authority",
+  "key": {
+    "algo": "rsa",
+    "size": 4096
+  }
+}
