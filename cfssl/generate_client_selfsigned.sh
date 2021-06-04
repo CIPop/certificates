@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
-cfssl gencert -initca
+# Note: hostname is required:
+
+cfssl selfsign \
               -config=config.json \
               -profile=client \
+              "myclient" \
               csr-client-ec.json | cfssljson -bare client1
