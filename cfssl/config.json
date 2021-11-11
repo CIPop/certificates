@@ -4,7 +4,7 @@
       "expiry": "8760h"
     },
     "profiles": {
-      "intermediateCA": {
+      "ca_profile": {
         "usages": [
           "signing",
           "key encipherment",
@@ -18,7 +18,7 @@
         },
         "expiry": "8760h"         
       },
-      "www": {
+      "server_profile": {
         "expiry": "8760h",
         "usages": [
             "signing",
@@ -26,7 +26,7 @@
             "server auth"
         ]
       },
-      "client": {
+      "client_profile": {
           "expiry": "8760h",
           "usages": [
               "signing",

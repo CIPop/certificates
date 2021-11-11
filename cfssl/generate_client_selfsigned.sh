@@ -5,6 +5,6 @@ CERTFILE=${1:-"client1"}
 
 cfssl selfsign \
               -config=config.json \
-              -profile=client \
+              -profile=client_profile \
               "myclient" \
               csr-client-ec.json | cfssljson -bare "${CERTFILE}"
