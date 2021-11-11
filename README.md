@@ -28,6 +28,8 @@ cd cfssl
 # Generates a client certificate within the previously generated chain.
 ./generate_server_chain.sh
 
+# Display the certificate details.
+./show.sh <cert.pem>
 ```
 
 
@@ -49,4 +51,7 @@ cd openssl
 
 # Edit the x509_server_config.cfg to change the Subject Alternative Name fields
 ./generate_server_chain.sh
+
+# Display the certificate details.
+./show.sh <cert.pem>
 ```
