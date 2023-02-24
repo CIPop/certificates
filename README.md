@@ -17,21 +17,20 @@ For all CFSSL scripts, edit the `csr_*.json` to change certificate name paramete
 cd cfssl
 
 # Generates a self-signed Client certificate.
-./generate_client_selfsigned.sh
+./generate_client_selfsigned.sh [../out_path] [out_file_name] [<ec|rsa>]
 
 # Generates a chain with 3 levels: CA, Intermediate CA 1, Intermediate CA 2
-./generate_chain.sh
+./generate_chain.sh [../out_path] [<ec|rsa>]
 
-# Generates a client certificate within the previously generated chain.
-./generate_client_chain.sh
+# Generates a client certificate within the previously generated chain. Issuer can be either the root CA or an intermediate.
+./generate_client_chain.sh [../out_path] [out_file_name] [<ec|rsa>] [<ca|i1|i2>]
 
-# Generates a client certificate within the previously generated chain.
-./generate_server_chain.sh
+# Generates a client certificate within the previously generated chain. Issuer can be either the root CA or an intermediate
+../generate_server_chain.sh [../out_path] [out_file_name] [<ec|rsa>] [<ca|i1|i2>]
 
 # Display the certificate details.
 ./show.sh <cert.pem>
 ```
-
 
 ## OpenSSL
 

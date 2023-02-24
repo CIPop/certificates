@@ -1,0 +1,8 @@
+{
+    "CN": "My Intermediate 2",
+    "key": {
+      "algo": "rsa",
+      "size": 4096
+    }
+  }
+  

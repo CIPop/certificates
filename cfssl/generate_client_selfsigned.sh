@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
-CERTFILE=${1:-"client1"}
+CERT_PATH=${1:-"../certs"}
+CERTFILE=${2:-"client_self1"}    # FileName
+TYPE=${3:-"ec"}                  # Type of key to use (ec or rsa)
 
-# Note: hostname is required:
+mkdir -p ${CERT_PATH}
 
 cfssl selfsign \
               -config=config.json \
               -profile=client_profile \
-              "myclient" \
-              csr-client-ec.json | cfssljson -bare "${CERTFILE}"
+              "${CERTFILE}" \
+              csr-client-${TYPE}.json | cfssljson -bare "${CERT_PATH}/${CERTFILE}"
